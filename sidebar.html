@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .sidenav {
+            height: 770px;
+            position: fixed;
+            z-index: 1;
+            overflow-x: hidden;
+            transition: 0.4s;
+            padding-top: 40px;
+            top: 0px;
+            left: 0px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            font-size: 40px;
+            color: black;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: white;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            right: 30px;
+            font-size: 50px;
+            margin-left: 50px;
+        }
+        
+        #imglogo {
+            height: 50px;
+            width: 50px;
+            padding: 2%;
+            cursor: pointer;
+        }
+        
+        #main {
+            transition: margin-left 0.5s;
+            padding: 16px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidebar {
+                padding-top: 15px;
+            }
+            .sidebar a {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav" style="width: 300px">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="train2.webp" alt="" style="height: 100px; width: 100px; padding-left: 10%" />
+        <br />
+        <br />
+        <a href="#">Home</a>
+        <a href="#">About</a>
+
+        <a href="#">Project</a>
+        <a href="#">Contact</a>
+        <a href="#">Clients</a>
+        <a href="#">Staff</a>
+        <span><img src="fb.png" alt="" id="imglogo" /><img
+          src="inst.jpeg"
+          alt=""
+          style="padding-left: 10%"
+          id="imglogo" /><img src="linkedin.png" alt="" id="imglogo"
+      /></span>
+    </div>
+    <div id="main">
+        <span style="
+          font-size: 80px;
+          cursor: pointer;
+          float: right;
+          padding-right: 5%;
+        " id="opennav" onclick="openNav()">☰</span
+      >
+    </div>
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0px";
+        document.getElementById("main").style.marginLeft = "0px";
+      }
+    </script>
+  </body>
+</html>

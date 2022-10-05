@@ -1,0 +1,120 @@
+Skip to content Search or jump to… Pull requests Issues Marketplace Explore @rathodbhavesh77 JayDamania / Sidebar_menu Public Code Issues Pull requests Actions Projects Security Insights Sidebar_menu/sidebar.html @JayDamania JayDamania first commit Latest
+commit 2dea861 3 minutes ago History 1 contributor 123 lines (113 sloc) 2.59 KB
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        body {
+            background-color: aliceblue;
+        }
+        
+        .sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255);
+            overflow-x: hidden;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 55px;
+            color: #242222;
+            display: block;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        
+        #imglogo {
+            height: 50px;
+            width: 50px;
+            padding: 2%;
+            cursor: pointer;
+            padding-top: 20%;
+        }
+        
+        @keyframes heartFadeInOut {
+            0% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(0.97);
+            }
+            35% {
+                transform: scale(0.9);
+            }
+            45% {
+                transform: scale(1.1);
+            }
+            55% {
+                transform: scale(0.9);
+            }
+            65% {
+                transform: scale(1.1);
+            }
+            75% {
+                transform: scale(1.03);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        #opennav {
+            animation-name: heartFadeInOut;
+            animation-iteration-count: infinite;
+            animation-duration: 2s;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mySidenav" class="sidenav">
+        <a href="#" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="train.png" alt="" style="height: 60px; width: 60px; padding-left: 10%" />
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+
+        <span><img src="fb.png" alt="" style="padding-left: 15%" id="imglogo" /><img
+          src="insta.png"
+          alt=""
+          id="imglogo" /><img src="linked.png" alt="" id="imglogo"
+      /></span>
+    </div>
+
+    <span style="font-size: 80px; cursor: pointer; float: right; padding-right: 2%" id="opennav" onclick="openNav()">&#9776;</span
+    >
+
+    <script>
+      function openNav() {
+        document.getElementById("mySidenav").style.width = "300px";
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+      }
+    </script>
+  </body>
+</html>
